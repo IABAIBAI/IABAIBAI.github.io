@@ -1,0 +1,363 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Typecho常用markdown语法 | Gridea</title>
+
+<link rel="shortcut icon" href="https://acza.me/favicon.ico?v=1602288501122">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://acza.me/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            Gridea
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            🎈首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            📕归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            🏷标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            🙎‍♂️关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1602288501122" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    Typecho常用markdown语法
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2020-04-21 ·
+                    </time>
+                    
+                        <a href="https://acza.me/w_yX25iJg/" class="post-tags">
+                            # Typecho
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>Markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。<br>
+Typecho博客是支持Markdown编辑模式的。</p>
+<hr>
+<h2 id="0-markdown注释语法">0、Markdown注释语法</h2>
+<pre><code class="language-markdown">[//]:(我是注释，不会在浏览器中显示。)
+[//]: # (我是注释，不会在浏览器中显示。)
+[^_^]: # (我是注释，不会在浏览器中显示。)
+&lt;!--我是注释文本，不会显示,这是HTML注释法，不建议使用--&gt;
+</code></pre>
+<hr>
+<h2 id="1-markdown背景色">1、Markdown背景色</h2>
+<p>Markdown本身不支持背景色设置，需要采用内置html的方式实现：借助 table, tr, td 等表格标签的 bgcolor 属性来实现背景色的功能。示例如下：<br>
+（语法）:</p>
+<pre><code class="language-markdown">&lt;table&gt;&lt;tr&gt;&lt;td bgcolor=orange&gt;背景色是：orange&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+</code></pre>
+<hr>
+<h2 id="2-markdown代码块">2、Markdown代码块</h2>
+<p>对于程序员来说这个功能是必不可少的，插入程序代码的方式有两种，一种是利用缩进(tab), 另一种是利用英文“ ` ”符号（一般在ESC键下方，和~同一个键）包裹代码。</p>
+<p>（1）代码块：缩进 4 个空格或是 1 个制表符。<br>
+（2）行内式：如果在一个行内需要引用代码，只要用反引号`引起来就好（一般在ESC键下方，和~同一个键）<br>
+（3）多行代码块与语法高亮：在需要高亮的代码块的前一行及后一行使用三个单反引号“ ` ”包裹，就可以了。<br>
+（4）代码块里面包含html代码<br>
+在代码区块里面， &amp; 、 &lt; 和 &gt; 会自动转成 HTML 实体，这样的方式让你非常容易使用 Markdown 插入范例用的 HTML 原始码，只需要复制贴上，剩下的 Markdown 都会帮你处理。注意：有的程序代码块里不支持html。</p>
+<pre><code class="language-markdown">`$``
+我就是代码块的代码了,删除掉里面的$符号！
+`$``
+</code></pre>
+<pre><code class="language-markdown">&lt;pre&gt;&lt;code&gt;
+我是一个代码区块，这是prism代码块，这个可以纯代码高亮！
+&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
+<p>还有一个就是单行代码是“ ` ”这个符号来包裹两边</p>
+<hr>
+<h2 id="3-markdown特殊符号">3、Markdown特殊符号</h2>
+<p>Unicode码：<a href="https://unicode-table.com/cn/" title="Unicode码">Unicode码</a></p>
+<hr>
+<h2 id="4-markdown超链接和图片">4、markdown超链接和图片</h2>
+<p>插入链接与插入图片的语法很像，区别在一个 <code>!</code>号，插入图片的地址是 URL 地址，可以使用自带编辑器上传图片获得 URL，或者上传至图床获得 URL,我更喜欢第一种写法，但是由于TY的一个水印插件对第一种写法无效！TY默认也是第二种写法！我们可以利用这个插件的BUG给不想图片有水印的可以用第一种写法。。。。<br>
+（语法）:</p>
+<pre><code class="language-markdown">[显示的文字](https://xxx链接)
+
+![图片说明就是图片不显示的文字](https://xxx.jpg)
+</code></pre>
+<p>当然你也可以这样写:</p>
+<pre><code class="language-markdown">[显示的文字][2]
+[2]: https://xxx链接
+
+！[图片说明就是…][3]
+[3]: https://xxx.j图p片g
+</code></pre>
+<h2 id="41-markdown图片大小">4.1、Markdown图片大小</h2>
+<p>4.2、Markdown图片位置<br>
+我们在md编辑器上面插入的图片的大小都是固定的，那么有什么方法可以改变图片的默认大小呢？<br>
+markdown是兼容HTML语法的，所以可以利用<code>&lt;img&gt;</code>标签来定义图片的大小<br>
+（语法）:</p>
+<pre><code class="language-markdown">&lt;img src=&quot;图标链接&quot; width=&quot;100&quot; height=&quot;％50&quot;&gt;&lt;/img&gt;
+</code></pre>
+<h2 id="42-markdown图片位置">4.2、Markdown图片位置</h2>
+<p>利用markdown在编写文档时插入图片是默认靠左，有些时候将图片设置为居中时可以更加的美观，这时就需要在图片的信息前边添加如下，如果想将图片位于右侧，只需要将居中的center改为right,有的MD解析器无效！</p>
+<pre><code class="language-markdown">&lt;div align=center&gt;![这里写图片描述](http://xx/xx.jpg)&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="5-markdown标题">5、markdown标题</h2>
+<p>标题由达到小在markdown里可以分为6级，类似于html的(h1-h6)<br>
+五级标题用“######”标记<br>
+六级标题用“#######”标记<br>
+就这样类推吧<br>
+（语法）:</p>
+<pre><code class="language-markdown">#####我是五级标题
+</code></pre>
+<hr>
+<h2 id="6-markdown列表">6、Markdown列表</h2>
+<p>熟悉 HTML 的同学肯定知道有序列表与无序列表的区别，在 Markdown 下，列表的显示只需要在文字前加上 - 或 * 即可变为无序列表，有序列表则直接在文字前加 1.2.3. 符号要和文字之间加上一个字符的空格。<br>
+（语法）:</p>
+<pre><code class="language-markdown">- 无序列表
+* 无序列表
+1. 有序列表
+2. 有序列表
+</code></pre>
+<p>（效果）:</p>
+<ul>
+<li>无序列表</li>
+</ul>
+<ul>
+<li>无序列表</li>
+</ul>
+<ol>
+<li>有序列表</li>
+<li>有序列表</li>
+</ol>
+<hr>
+<h2 id="7-markdown引用">7、Markdown引用</h2>
+<p>如果你需要引用一小段别处的句子，那么就要用引用的格式，在 Markdown 里只需要在文本前加入 &gt; 这种尖括号（大于号）即可，要注意符号后面和文本间有个空格。有时候一大段文字只需要用一个就行，但是有时候你换行了，就会引用不到下面那一句话，这样的话，你只要在换行的地方再加个&gt;符号就好了！<br>
+（语法）:</p>
+<pre><code class="language-markdown">&gt; 这里是引用
+&gt; 这是引用
+&gt; * 当然你也可以添加一个无序*符号
+</code></pre>
+<p>（效果）:</p>
+<blockquote>
+<p>这里是引用<br>
+这是引用</p>
+<ul>
+<li>当然你也可以添加一个无序*符号</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="8-markdown分割线">8、Markdown分割线</h2>
+<p>分割线的语法只需要另起一行，连续输入三个星号 * 或 - 即可。3个符号 - 或*需上换一行。<br>
+（语法）:</p>
+<pre><code class="language-markdown">//-需上换一行
+---
+//*无需换一行
+***
+</code></pre>
+<p>（效果就是下面黑线条）:</p>
+<hr>
+<hr>
+<h2 id="9-markdown层级">9、Markdown层级</h2>
+<p>层级通过 + 号实现，注意空格。<br>
+（语法）:</p>
+<pre><code class="language-markdown">+ 第一级
+ + 第二级
+  + 第三级
+</code></pre>
+<p>（效果）:</p>
+<ul>
+<li>第一级</li>
+<li>第二级</li>
+<li>第三级</li>
+</ul>
+<hr>
+<h2 id="10-md粗体斜体删除线">10、Md粗体/斜体/删除线</h2>
+<p>Markdown 的粗体和斜体也非常简单，用两个包含一段文本就是粗体的语法，用一个包含一段文本就是斜体的语法，删除线 是四个英文的~是删除线！<br>
+（语法）:</p>
+<pre><code class="language-markdown">这是**粗体**这是*斜体*这是~~删除线~~
+</code></pre>
+<p>（效果）:<br>
+这是<strong>粗体</strong>这是<em>斜体</em>这是<s>删除线</s></p>
+<h2 id="101-markdown字体大小">10.1、Markdown字体大小</h2>
+<p>markdown是兼容HTML的，所以可以使用<code>&lt;font&gt;</code>标签来设置字体大小，不过有的Markdown解析器好像无效……</p>
+<pre><code class="language-markdown">&lt;font size=7&gt;我是放大字&lt;/font&gt;
+&lt;font size=1&gt;我是缩小字&lt;/font&gt;
+&lt;font color=#0099ff size=7 face=&quot;黑体&quot;&gt;文字的颜色，大小，字体&lt;/font&gt;
+</code></pre>
+<hr>
+<h2 id="11-markdown表格">11、Markdown表格</h2>
+<p>表格是我觉得 Markdown 比较累人的地方，例子如下（注意文字对齐方式）。</p>
+<ol>
+<li>里面的<code>:</code>我发现好像是文字位置的，注意一下我故意把<code>:--</code>上午靠左边，<code>--:</code>下午靠右边，<code>: -- :</code>中午居中！</li>
+<li>还有就是我在语法中的第四个左右两边少打了<code>|</code>符号，发现也没事，只要文字之间有<code>|</code>就行了，但是<code>|----:|</code>的这一行必须有，当然能全部打完符号更好！<br>
+（语法）:</li>
+</ol>
+<pre><code class="language-markdown">| 星期一  | 星期二  | 星期三 |
+|:------ |: ------ :| -----:|
+| 上午 | 中午 |  下午  |
+  上午 | 中午 |  下午
+| 上午 | 中午 |  下午  |
+</code></pre>
+<p>（效果）:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">星期一</th>
+<th style="text-align:center">星期二</th>
+<th style="text-align:right">星期三</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">上午</td>
+<td style="text-align:center">中午</td>
+<td style="text-align:right">下午</td>
+</tr>
+<tr>
+<td style="text-align:left">上午</td>
+<td style="text-align:center">中午</td>
+<td style="text-align:right">下午</td>
+</tr>
+<tr>
+<td style="text-align:left">上午</td>
+<td style="text-align:center">中午</td>
+<td style="text-align:right">下午</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="12-markdown不处理">12、Markdown不处理</h2>
+<p>有时候我们正常的文字表达中出现了 Markdown 标记，但实际上是不希望被标记解析的，这时候我们可以通过反斜杠 <code>\</code> 来声明。<br>
+（语法）:</p>
+<pre><code class="language-markdown">1\.这不是列表
+1.这是列表
+</code></pre>
+<p>（效果）:<br>
+1.这不是列表<br>
+1.这是列表</p>
+<hr>
+<h2 id="13-markdown首行缩进">13、Markdown首行缩进</h2>
+<p>markdown没有专门的符号来表示首行缩进，但是这也难不倒伟大的人们。我们发现把输入法置为全角状态，然后再输入两个空格就可以了。有可能也有人和我一样有疑问？因为我经常用手机写文章啥办？嗯，无解，暂时处理我就是电脑上面打好，手机需要用的时候再去复制………是不是有点……还可能会失效……，Markdown可以用<code>&lt;/hr&gt;</code>的水平分割线，还有<code>&lt;br&gt;</code>换行符！</p>
+<hr>
+<p>更多可用参考：</p>
+<p><a href="https://blog.csdn.net/u014061630/article/details/81359144" title="Markdown语法图文全面详解(10分钟学会)">Markdown语法图文全面详解(10分钟学会)</a></p>
+<p><a href="https://blog.csdn.net/witnessai1/article/details/52551362" title="Markdown语法手册（完整整理版）">Markdown语法手册（完整整理版）</a></p>
+<p><a href="https://www.zybuluo.com/mdeditor" title="web在线Markdown编辑器">web在线Markdown编辑器</a></p>
+<p><a href="https://coding.net/help/doc/project/markdown.html" title="Markdown语法介绍">Markdown语法介绍</a></p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://acza.me/hello-gridea/" class="post-title gt-a-link">
+                    Hello Gridea
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">温故而知新</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://acza.me/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>
