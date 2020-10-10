@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acza.me</id>
     <title>Gridea</title>
-    <updated>2020-10-10T00:11:48.981Z</updated>
+    <updated>2020-10-10T00:14:31.096Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acza.me"/>
     <link rel="self" href="https://acza.me/atom.xml"/>
@@ -12,22 +12,22 @@
     <rights>All rights reserved 2020, Gridea</rights>
     <entry>
         <title type="html"><![CDATA[电视直播]]></title>
-        <id>https://acza.me/6xUprUVf6/</id>
-        <link href="https://acza.me/6xUprUVf6/">
+        <id>https://acza.me/post/6xUprUVf6/</id>
+        <link href="https://acza.me/post/6xUprUVf6/">
         </link>
         <updated>2020-05-10T03:42:28.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Typecho常用markdown语法]]></title>
-        <id>https://acza.me/vSkYq7V4W/</id>
-        <link href="https://acza.me/vSkYq7V4W/">
+        <id>https://acza.me/post/vSkYq7V4W/</id>
+        <link href="https://acza.me/post/vSkYq7V4W/">
         </link>
         <updated>2020-04-21T07:12:44.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://acza.me/hello-gridea/</id>
-        <link href="https://acza.me/hello-gridea/">
+        <id>https://acza.me/post/hello-gridea/</id>
+        <link href="https://acza.me/post/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
